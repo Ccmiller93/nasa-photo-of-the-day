@@ -1,12 +1,15 @@
-import React, {useState, useEffect} from "react";
-import "./App.css";
-import axios from 'axios'
+import React from "react";
+import "../App.css";
+
 
 export default function Display(props) {
     const { data } = props
     return (
         <div className='big-container'>
-            <img src={data.url}/>
+            <h1>{data.title}</h1>
+            <h2>{data.date}</h2>
+            <img src={data.url} alt='' />
+            <p>{data.explanation}</p>
         </div>
     )
 }
